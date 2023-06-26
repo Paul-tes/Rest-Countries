@@ -30,7 +30,6 @@
 .header-search-container .total-population {
   font-size: 0.6rem;
   font-weight: 200;
-  color: #fff;
 }
 
 .search-div {
@@ -47,4 +46,10 @@ input {
   font-size: xx-small;
   padding: 3%;
   width: 8rem;
+}
+
+.pop-text-div {
+  background-color: #df4682;
+  font-size: x-small;
+  padding: 2%;
 }

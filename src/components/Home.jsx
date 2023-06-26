@@ -18,6 +18,7 @@ const Home = () => (
         </div>
       </div>
     </div>
+    <div className="pop-text-div">POPULATION OF COUNTRY&apos;S</div>
     <div className="coutry-lists">
       <div className="coutry-item" />
       <div className="coutry-item" />
