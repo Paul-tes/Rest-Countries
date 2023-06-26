@@ -14,7 +14,7 @@ const Home = () => (
         <p className="total-population">1.3M</p>
         <div className="search-div">
           <input type="text" className="search input" placeholder="search by continent" />
-          <button type="submit" className="search-btn"><img src={searchIcon} alt="search-icon" /></button>
+          <button type="button" className="search-btn"><img src={searchIcon} alt="search-icon" /></button>
         </div>
       </div>
     </div>
