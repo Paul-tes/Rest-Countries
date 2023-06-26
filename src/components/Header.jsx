@@ -1,6 +1,7 @@
 import leftArr from '../assets/images/GoBackIcon.png';
 import micIcon from '../assets/images/MicIcon.png';
 import settingIcon from '../assets/images/SettingsIcon.png';
+import './styles/header.css';
 
 const Header = () => (
   <header>
