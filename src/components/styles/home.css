@@ -49,7 +49,27 @@ input {
 }
 
 .pop-text-div {
-  background-color: #df4682;
+  background-color: #e45d93;
   font-size: x-small;
   padding: 2%;
+}
+
+.coutry-lists {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.coutry-item {
+  display: flex;
+  flex-direction: column;
+  padding: 3%;
+  text-align: end;
+  width: 44%;
+  height: 4rem;
+  background-color: #df4682;
+  margin: 1rem;
+}
+
+.coutry-item:nth-child(even) {
+  background-color: #cc4075;
 }

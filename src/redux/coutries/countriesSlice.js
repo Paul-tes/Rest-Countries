@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const URL = 'https://restcountries.com/v3.1/all';
 
-export const fetchCoutries = createAsyncThunk(
+export const fetchCountries = createAsyncThunk(
   'coutry/fetchCoutry',
   async () => {
     const res = await axios.get(URL);
@@ -11,10 +11,10 @@ export const fetchCoutries = createAsyncThunk(
   },
 );
 
-const coutriesSlice = createSlice({
+export const coutriesSlice = createSlice({
   name: 'countries',
   initialState: {
-    coutries: [],
+    countries: [],
     status: 'idle',
     error: null,
   },
@@ -23,19 +23,19 @@ const coutriesSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(fetchCoutries.pending, (state) => {
+      .addCase(fetchCountries.pending, (state) => {
         state.status = 'loadding...';
       })
-      .addCase(fetchCoutries.fulfilled, (state, action) => {
+      .addCase(fetchCountries.fulfilled, (state, action) => {
         state.status = 'loaded';
-        state.coutries = action.payload.map((country) => ({
+        state.countries = action.payload.map((country) => ({
           name: country.name.common,
           officialName: country.name.official,
           region: country.region,
-          lang: country.languages[0],
+          lang: country.languages,
           area: country.area,
           flag: country.flags.png,
-          loc: country.capitalInfo.capitalInfo,
+          loc: country.capitalInfo,
           pop: country.population,
           gini: country.gini,
         }));
@@ -43,4 +43,4 @@ const coutriesSlice = createSlice({
   },
 });
 
-export default coutriesSlice;
+export default coutriesSlice.reducer;

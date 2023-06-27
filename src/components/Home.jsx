@@ -1,19 +1,20 @@
 import './styles/home.css';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import worldMapImg from '../assets/images/world-map.png';
 import searchIcon from '../assets/images/search-line.png';
-import { fetchCoutries } from '../redux/coutries/countriesSlice';
+import { fetchCountries } from '../redux/coutries/countriesSlice';
 
 const Home = () => {
   const distpatch = useDispatch();
-  // const { coutries } = useSelector((state) => state.coutries);
 
   useEffect(() => {
-    distpatch(fetchCoutries());
+    distpatch(fetchCountries());
   }, [distpatch]);
 
-  // console.log(coutries);
+  const { coutries, status } = useSelector((state) => state.countries);
+  console.log(coutries, status);
+
   return (
     <div className="home-container">
       <div className="header-div">
@@ -32,6 +33,7 @@ const Home = () => {
       </div>
       <div className="pop-text-div">POPULATION OF COUNTRY&apos;S</div>
       <div className="coutry-lists">
+        <div className="coutry-item" />
         <div className="coutry-item" />
         <div className="coutry-item" />
         <div className="coutry-item" />

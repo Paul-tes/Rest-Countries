@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import coutriesReducer from './coutries/countriesSlice';
+import countriesReducer from './coutries/countriesSlice';
 
 const store = configureStore({
   reducer: {
-    coutries: coutriesReducer,
+    countries: countriesReducer,
   },
 });
 
