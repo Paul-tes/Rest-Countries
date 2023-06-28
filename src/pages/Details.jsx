@@ -40,8 +40,10 @@ const Details = () => {
         </li>
         <li className="detail-item">
           <p>Gini</p>
-          <p>{propertyNames}</p>
-          <p>{country.gini[propertyNames]}</p>
+          <div>
+            <p>{propertyNames}</p>
+            <p>{country.gini[propertyNames]}</p>
+          </div>
         </li>
         <li className="detail-item">
           <a href={country.map} target="_black">Map</a>

@@ -50,9 +50,19 @@
   background-color: #db4781;
 }
 
+.detail-item div {
+  display: flex;
+  gap: 0.4rem;
+}
+
 .detail-item p:nth-child(2),
 .detail-item p:nth-child(3) {
   font-size: 0.7rem;
+  font-weight: 200;
+}
+
+.detail-item div p:nth-child(1) {
+  font-size: 0.9rem;
   font-weight: 200;
 }
 
