@@ -1,36 +1,50 @@
 import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import '../components/styles/details.css';
 
 const Details = () => {
-  const { country } = useParams();
+  const { cName } = useParams();
+  const { countries } = useSelector((state) => state.countries);
+  const country = countries.find((country) => country.name === cName);
+
+  const propertyNames = country.gini ? Object.keys(country.gini) : ['N/A'];
+
   return (
     <div className="details-page-container">
-      {console.log(country)}
       <div className="details-top">
-        <img src="https://flagcdn.com/w320/et.png" alt="flag" />
+        <img src={country.flag} alt="flag" />
         <div className="des-writings">
-          <h4 className="offical-name"> Democratic Republic of Ethiopia </h4>
-          <h2 className="name">Ethiopia</h2>
-          <p className="population">123123123</p>
-          <p className="region">Africa</p>
+          <h4 className="offical-name">{country.officialName}</h4>
+          <h2 className="name">{country.name}</h2>
+          <p className="population">{country.pop}</p>
+          <p className="region">{country.region}</p>
         </div>
       </div>
-      <div className="pop-text-div">ABOUT ETHIOPIA</div>
+      <div className="pop-text-div">
+        ABOUT
+        {' '}
+        {country.name.toUpperCase()}
+      </div>
       <ul className="details-container">
         <li className="detail-item">
           <p>Population</p>
-          <p>23456789 p</p>
+          <p>{country.pop}</p>
         </li>
         <li className="detail-item">
           <p>Area</p>
-          <p>6789 m</p>
+          <p>
+            {country.area}
+            {' '}
+            m
+          </p>
         </li>
         <li className="detail-item">
           <p>Gini</p>
-          <p>234</p>
+          <p>{propertyNames}</p>
+          <p>{country.gini[propertyNames]}</p>
         </li>
         <li className="detail-item">
-          <a href="map">Map</a>
+          <a href={country.map} target="_black">Map</a>
         </li>
       </ul>
     </div>

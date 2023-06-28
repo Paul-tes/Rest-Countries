@@ -28,7 +28,7 @@ const Home = () => {
         <img className="world-map" src={worldMapImg} alt="world map" />
         <div className="header-search-container">
           <p>
-            Coutris reaches Our Planet. Have you ever questioned your country&apos;s population?
+            Countries reaches Our Planet. Have you ever questioned your country&apos;s population?
             You are there right now to discover.
           </p>
           <p className="total-population">1.3M</p>

@@ -50,7 +50,8 @@
   background-color: #db4781;
 }
 
-.detail-item p:nth-child(2) {
+.detail-item p:nth-child(2),
+.detail-item p:nth-child(3) {
   font-size: 0.7rem;
   font-weight: 200;
 }
