@@ -16,12 +16,12 @@ const Home = () => {
 
   const [region, setRegion] = useState('Africa');
 
-  const onClickSearch = (value) => {
+  const eventSearch = (value) => {
     setRegion(value);
   };
 
   const { countries, status } = useSelector((state) => state.countries);
-  const AfricanCountries = countries.filter((country) => country.region === region);
+  const filteredCountries = countries.filter((country) => country.region === region);
   return (
     <div className="home-container">
       <div className="header-div">
@@ -33,7 +33,7 @@ const Home = () => {
           </p>
           <p className="total-population">1.3M</p>
           <div className="search-div">
-            <input type="text" className="search input" placeholder="search by continent" />
+            <input type="text" className="search input" placeholder="search by continent" onChange={(e) => eventSearch(e.target.value)} />
             <button type="button" className="search-btn"><img src={searchIcon} alt="search-icon" /></button>
           </div>
         </div>
@@ -43,9 +43,18 @@ const Home = () => {
         {status === 'loadding'
           && <Loading />}
         {status === 'loaded'
-        && AfricanCountries.map((country) => (
+        && filteredCountries.map((country) => (
           <Country key={country.name} country={country} />
         ))}
+        {status === 'loaded'
+        && filteredCountries.length === 0
+        && (
+        <div className="no-flltered-Country">
+          Opps! No Filtered Countries.
+          <br />
+          Try Again!
+        </div>
+        )}
       </div>
     </div>
   );

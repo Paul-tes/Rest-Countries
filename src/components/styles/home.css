@@ -46,6 +46,7 @@ input {
   font-size: xx-small;
   padding: 3%;
   width: 8rem;
+  color: #000;
 }
 
 .pop-text-div {
@@ -86,7 +87,6 @@ input {
 }
 
 .coutry-item a img {
-  position: relative;
   float: right;
   margin-right: 0.6rem;
   margin-top: 0.6rem;
@@ -102,4 +102,11 @@ input {
 
 .flag img:hover {
   width: 8rem;
+}
+
+.no-flltered-Country {
+  text-align: center;
+  margin: 2rem auto;
+  font-size: 2rem;
+  opacity: 0.6;
 }
