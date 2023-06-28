@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import showIcon from '../assets/images/ShowIcon.png';
 
 const Country = ({ country }) => (
   <div className="coutry-item">
-    {console.log(country.name, ' Population: ', country.pop)}
-    <a href="sdfsdf">
+    <Link to={`/details/${country.name}`}>
       <img src={showIcon} alt="show icon" />
-    </a>
+    </Link>
     <div className="flag">
       <img src={country.flag} alt="flag" />
     </div>

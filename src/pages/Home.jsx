@@ -1,11 +1,11 @@
-import './styles/home.css';
+import '../components/styles/home.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import worldMapImg from '../assets/images/world-map.png';
 import searchIcon from '../assets/images/search-line.png';
 import { fetchCountries } from '../redux/coutries/countriesSlice';
-import Country from './Coutry';
-import Loading from './Loading';
+import Country from '../components/Coutry';
+import Loading from '../components/Loading';
 
 const Home = () => {
   const distpatch = useDispatch();
