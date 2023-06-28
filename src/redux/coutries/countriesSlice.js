@@ -24,7 +24,7 @@ export const coutriesSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchCountries.pending, (state) => {
-        state.status = 'loadding...';
+        state.status = 'loadding';
       })
       .addCase(fetchCountries.fulfilled, (state, action) => {
         state.status = 'loaded';

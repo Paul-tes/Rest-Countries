@@ -49,7 +49,7 @@ input {
 }
 
 .pop-text-div {
-  background-color: #e45d93;
+  background-color: #df4682;
   font-size: x-small;
   padding: 2%;
 }
@@ -57,19 +57,49 @@ input {
 .coutry-lists {
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
 .coutry-item {
   display: flex;
   flex-direction: column;
-  padding: 3%;
-  text-align: end;
-  width: 44%;
-  height: 4rem;
+  width: 50%;
   background-color: #df4682;
-  margin: 1rem;
 }
 
-.coutry-item:nth-child(even) {
+.coutry-item:nth-child(4n+2),
+.coutry-item:nth-child(4n+3) {
   background-color: #cc4075;
+}
+
+.flag img {
+  width: 7rem;
+  margin: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.56) 1px 22px 70px 4px;
+}
+
+.dis h4 {
+  text-align: end;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.coutry-item a img {
+  position: relative;
+  float: right;
+  margin-right: 0.6rem;
+  margin-top: 0.6rem;
+}
+
+.coutry-lists .dis p {
+  text-align: end;
+  font-weight: 200;
+  margin-right: 0.5rem;
+  font-size: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.flag img:hover {
+  width: 8rem;
 }

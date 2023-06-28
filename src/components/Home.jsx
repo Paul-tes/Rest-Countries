@@ -1,9 +1,11 @@
 import './styles/home.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import worldMapImg from '../assets/images/world-map.png';
 import searchIcon from '../assets/images/search-line.png';
 import { fetchCountries } from '../redux/coutries/countriesSlice';
+import Country from './Coutry';
+import Loading from './Loading';
 
 const Home = () => {
   const distpatch = useDispatch();
@@ -12,9 +14,14 @@ const Home = () => {
     distpatch(fetchCountries());
   }, [distpatch]);
 
-  const { coutries, status } = useSelector((state) => state.countries);
-  console.log(coutries, status);
+  const [region, setRegion] = useState('Africa');
 
+  const onClickSearch = (value) => {
+    setRegion(value);
+  };
+
+  const { countries, status } = useSelector((state) => state.countries);
+  const AfricanCountries = countries.filter((country) => country.region === region);
   return (
     <div className="home-container">
       <div className="header-div">
@@ -33,12 +40,12 @@ const Home = () => {
       </div>
       <div className="pop-text-div">POPULATION OF COUNTRY&apos;S</div>
       <div className="coutry-lists">
-        <div className="coutry-item" />
-        <div className="coutry-item" />
-        <div className="coutry-item" />
-        <div className="coutry-item" />
-        <div className="coutry-item" />
-        <div className="coutry-item" />
+        {status === 'loadding'
+          && <Loading />}
+        {status === 'loaded'
+        && AfricanCountries.map((country) => (
+          <Country key={country.name} country={country} />
+        ))}
       </div>
     </div>
   );
