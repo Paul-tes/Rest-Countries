@@ -1,11 +1,11 @@
-import './styles/home.css';
+import '../components/styles/home.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import worldMapImg from '../assets/images/world-map.png';
 import searchIcon from '../assets/images/search-line.png';
-import { fetchCountries } from '../redux/coutries/countriesSlice';
-import Country from './Coutry';
-import Loading from './Loading';
+import { fetchCountries } from '../redux/countries/countriesSlice';
+import Country from '../components/Coutry';
+import Loading from '../components/Loading';
 
 const Home = () => {
   const distpatch = useDispatch();
@@ -28,7 +28,7 @@ const Home = () => {
         <img className="world-map" src={worldMapImg} alt="world map" />
         <div className="header-search-container">
           <p>
-            Coutris reaches Our Planet. Have you ever questioned your country&apos;s population?
+            Countries reaches Our Planet. Have you ever questioned your country&apos;s population?
             You are there right now to discover.
           </p>
           <p className="total-population">1.3M</p>

@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import countriesReducer from './coutries/countriesSlice';
+import countriesReducer from './countries/countriesSlice';
 
 const store = configureStore({
   reducer: {

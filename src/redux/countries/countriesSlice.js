@@ -18,9 +18,6 @@ export const coutriesSlice = createSlice({
     status: 'idle',
     error: null,
   },
-  reducers: {
-
-  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchCountries.pending, (state) => {
@@ -38,6 +35,7 @@ export const coutriesSlice = createSlice({
           loc: country.capitalInfo,
           pop: country.population,
           gini: country.gini,
+          map: country.maps.googleMaps,
         }));
       });
   },
