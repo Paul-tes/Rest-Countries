@@ -17,8 +17,6 @@ const Country = ({ country }) => (
   </div>
 );
 
-// {console.log(country.pop, ' Name: ', country.name, ' region: ', country.region)}
-
 Country.propTypes = {
   country: PropTypes.shape({
     name: PropTypes.string,
