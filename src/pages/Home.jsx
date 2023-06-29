@@ -17,7 +17,8 @@ const Home = () => {
   const [region, setRegion] = useState('Africa');
 
   const eventSearch = (value) => {
-    setRegion(value);
+    const str = value.charAt(0).toUpperCase() + value.slice(1).toLowerCase();
+    setRegion(str);
   };
 
   const { countries, status } = useSelector((state) => state.countries);
