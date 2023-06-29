@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build babel src --out-dir dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -42,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.22.5",
     "@babel/core": "^7.22.5",
     "@babel/eslint-parser": "^7.22.5",
     "@babel/plugin-syntax-jsx": "^7.22.5",
@@ -56,6 +57,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "esm": "^3.2.25",
     "nock": "^13.3.1",
+    "react-test-renderer": "^18.2.0",
     "redux-mock-store": "^1.5.4",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
