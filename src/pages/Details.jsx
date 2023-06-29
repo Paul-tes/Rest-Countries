@@ -32,10 +32,11 @@ const Details = () => {
           <li className="detail-item">
             <p>Area</p>
             <p>{country.area || 'Not Resolved still'}</p>
-            <span>m</span>
+            m
           </li>
           <li className="detail-item">
             <p>Gini</p>
+            <p>{propertyNames || 'No gini'}</p>
             <p>{country.gini[propertyNames] || 'N/A'}</p>
           </li>
           <li className="detail-item">
