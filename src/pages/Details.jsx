@@ -31,8 +31,11 @@ const Details = () => {
           </li>
           <li className="detail-item">
             <p>Area</p>
-            <p>{country.area || 'Not Resolved still'}</p>
-            m
+            <p>
+              {country.area || 'Not Resolved still'}
+              m
+
+            </p>
           </li>
           <li className="detail-item">
             <p>Gini</p>
