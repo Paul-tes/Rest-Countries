@@ -75,7 +75,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://countries-pupulation.onrender.coms/)
+- [Live Demo Link](https://countries-pupulation.onrender.com/)
 - [Live Demo vedio](https://drive.google.com/file/d/1FE7YQWdW8_W8TBd6Ke6EiOR7blYUKUDU/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -190,7 +190,8 @@ If you like this project give me a ⭐️ please.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank microverse.
+- I would like to thank microverse.
+- I would like to give acknowledeements to the original design idea by Nelson Sakwa on Behance.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
